@@ -33,15 +33,21 @@ namespace ExportMepSpaceToExcel
             FilteredElementCollector col
               = new FilteredElementCollector(doc)
                 .WhereElementIsNotElementType()
-                .OfCategory(BuiltInCategory.INVALID)
-                .OfClass(typeof(Wall));
+                .OfCategory(BuiltInCategory.OST_MEPSpaces);
 
             // Filtered element collector is iterable
+
+            List<Element> lstElem = new List<Element>();
 
             foreach (Element e in col)
             {
                 Debug.Print(e.Name);
+                lstElem.Add(e);
             }
+
+
+
+
 
             // Modify document within a transaction
 
