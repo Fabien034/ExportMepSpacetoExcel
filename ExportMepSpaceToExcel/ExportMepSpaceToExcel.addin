@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Command">
+    <Text>Command ExportMepSpaceToExcel</Text>
+    <Description>Some description for ExportMepSpaceToExcel</Description>
+    <Assembly>ExportMepSpaceToExcel.dll</Assembly>
+    <FullClassName>ExportMepSpaceToExcel.Command</FullClassName>
+    <ClientId>3875fd2e-46a1-45cd-b33c-095514982884</ClientId>
+    <VendorId>com.typepad.thebuildingcoder</VendorId>
+    <VendorDescription>Fabien Rosso, http://thebuildingcoder.typepad.com</VendorDescription>
+  </AddIn>
+  <AddIn Type="Application">
+    <Name>Application ExportMepSpaceToExcel</Name>
+    <Assembly>ExportMepSpaceToExcel.dll</Assembly>
+    <FullClassName>ExportMepSpaceToExcel.App</FullClassName>
+    <ClientId>913c7d9a-2e34-4e72-bdb5-fd2863049a8e</ClientId>
+    <VendorId>com.typepad.thebuildingcoder</VendorId>
+    <VendorDescription>The Building Coder, http://thebuildingcoder.typepad.com</VendorDescription>
+  </AddIn>
+</RevitAddIns>
