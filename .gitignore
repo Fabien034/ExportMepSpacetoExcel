@@ -259,3 +259,5 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/ExportMepSpaceToExcel/Properties/Settings.Designer.cs
+/ExportMepSpaceToExcel/Properties/Settings.settings
