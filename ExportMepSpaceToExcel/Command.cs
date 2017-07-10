@@ -35,12 +35,18 @@ namespace ExportMepSpaceToExcel
                 .WhereElementIsNotElementType()
                 .OfCategory(BuiltInCategory.OST_MEPSpaces);
 
-            foreach (Element e in col)
+            using (Transaction tx = new Transaction(doc))
             {
-                Parameter p = e.get_Parameter(BuiltInParameter.ALL_MODEL_INSTANCE_COMMENTS);
-                //				Parameter p = e.Parameters.Cast<Parameter>().FirstOrDefault(q => q.Definition.Name == "Commentaires");
-                string newComment = "Test01";
-                p.Set(newComment);
+                tx.Start("Transaction Name");
+                foreach (Element e in col)
+	            {
+	                Parameter p = e.get_Parameter(BuiltInParameter.ALL_MODEL_INSTANCE_COMMENTS);
+//					Parameter p = e.Parameters.Cast<Parameter>().FirstOrDefault(q => q.Definition.Name == "Commentaires");
+	                string newComment = "Test11";
+	                p.Set(newComment);
+	
+	            } 
+                tx.Commit();
             }
 
 
