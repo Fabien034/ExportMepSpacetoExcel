@@ -35,18 +35,13 @@ namespace ExportMepSpaceToExcel
                 .WhereElementIsNotElementType()
                 .OfCategory(BuiltInCategory.OST_MEPSpaces);
 
-            // Filtered element collector is iterable
-
-            List<Element> lstElem = new List<Element>();
-
             foreach (Element e in col)
             {
-                Debug.Print(e.Name);
-                lstElem.Add(e);
+                Parameter p = e.get_Parameter(BuiltInParameter.ALL_MODEL_INSTANCE_COMMENTS);
+                //				Parameter p = e.Parameters.Cast<Parameter>().FirstOrDefault(q => q.Definition.Name == "Commentaires");
+                string newComment = "Test01";
+                p.Set(newComment);
             }
-
-
-
 
 
             // Modify document within a transaction
